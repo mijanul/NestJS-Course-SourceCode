@@ -3,24 +3,33 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "asdf@asd.com",
+  "email": "mijanul@mailinator.com",
   "password": "asdfjkl"
 }
 
+### Sign In as existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "mijanul@mailinator.com",
+  "password": "asdfjkl"
+}
+
+### Get Currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/singout
 
 ### Find a particular user with a given ID
-GET http://localhost:3000/auth/2
-
+GET http://localhost:3000/auth/23
 
 ### Find all users with given email
-
 GET http://localhost:3000/auth?email=asdf@asd.com
 
-
 ### Delete a user by given id
-
 DELETE http://localhost:3000/auth/1
-
 
 ### Update a user by id
 PATCH http://localhost:3000/auth/2
